@@ -3,7 +3,9 @@
 LLVM_HOST_DEPS = cmake
 $(eval $(call project-define,llvm))
 
-ifeq ($(NDK_ARCH), arm64)
+ifeq ($(NDK_ARCH), arm)
+LLVM_HOST_TRIPLE = arm-none-linux-gnu
+else ifeq ($(NDK_ARCH), arm64)
 LLVM_HOST_TRIPLE = aarch64-none-linux-gnu
 else ifeq ($(NDK_ARCH), x86_64)
 LLVM_HOST_TRIPLE = x86_64-none-linux-gnu

@@ -1,6 +1,8 @@
 # Copyright (c) Meta Platforms, Inc. and affiliates.
 
-ifeq ($(NDK_ARCH), arm64)
+ifeq ($(NDK_ARCH), arm)
+ANDROID_TRIPLE = armv7a-linux-androideabi
+else ifeq ($(NDK_ARCH), arm64)
 ANDROID_TRIPLE = aarch64-linux-android
 else ifeq ($(NDK_ARCH), x86_64)
 ANDROID_TRIPLE = x86_64-linux-android

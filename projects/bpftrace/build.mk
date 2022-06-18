@@ -24,4 +24,4 @@ BPFTRACE_COMMIT = 9382ad1c89e9cf6cd382997e1c0e7b1b7cfcc740
 BPFTRACE_REPO = https://github.com/iovisor/bpftrace.git/
 projects/bpftrace/sources:
 	git clone $(BPFTRACE_REPO) $@
-	cd $@ && git checkout $(BPFTRACE_COMMIT)
+	cd $@ && git checkout $(BPFTRACE_COMMIT) && git apply $(BPFTRACE_SRCS)/../patches/*

@@ -67,7 +67,7 @@ Some of the tools require root privileges to run. In addition BPF tools require 
 
 # Variables impacting build process
 - `THREADS` - number of jobs to run simultaneously. This value is passed to nested make invocations via `-j` option. The default value is 4.
-- `NDK_ARCH` - x86_64 or arm64. Architecture to cross compile for. The default value is arm64
+- `NDK_ARCH` - x86_64, arm or arm64. Architecture to cross compile for. The default value is arm64
 - `BUILD_TYPE` - Release or Debug, controlls amount of debug info to be included in resulting libs and binaries. The default value is Release.
 
 ```

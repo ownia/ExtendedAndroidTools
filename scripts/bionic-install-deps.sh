@@ -14,6 +14,7 @@ apt-get install -y \
      gettext \
      git \
      help2man \
+     libbpfcc-dev \
      libssl-dev \
      libtool \
      make \
